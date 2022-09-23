@@ -1,7 +1,10 @@
 package tpo3grupo8lab1;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
+import javax.swing.JOptionPane;
 
 public class Directorio {
 
@@ -14,22 +17,60 @@ public class Directorio {
         return registroClientes;
     }
 
-    void agregarCliente(Cliente cliente, Telefono numero) {
+    public boolean agregarCliente(Cliente cliente, Telefono numero) {
+
+        if (registroClientes.containsKey(numero)) {
+            JOptionPane.showMessageDialog(null, "Este numero de telefono ya se encontraba registrado");
+            return false;
+        } else {
+            registroClientes.put(numero, cliente);
+            JOptionPane.showMessageDialog(null, "Cliente registrado.");
+            return true;
+        }
+    }
+
+    public boolean borrarCliente(Telefono numero) {
+
+        if (registroClientes.containsKey(numero)) {
+            JOptionPane.showMessageDialog(null, "Cliente eliminado del registro");
+            registroClientes.remove(numero);
+            return true;
+        } else {
+            JOptionPane.showMessageDialog(null, "El numero no corresponde a ningun cliente registrado.");
+            return false;
+        }
+    }
+
+    public Cliente buscarCliente(Telefono numero) {
+        if (registroClientes.containsKey(numero)) {
+            return registroClientes.get(numero);
+        } else {
+            JOptionPane.showMessageDialog(null, "El numero no corresponde a ningun cliente registrado.");
+            return registroClientes.get(numero);
+        }
 
     }
 
-    void borrarCliente(Telefono numero) {
+    public ArrayList<Telefono> buscarTelefono(String apellido) {
+
+        ArrayList<Telefono> listaTelefonos = new ArrayList();
+        for (Map.Entry<Telefono, Cliente> entry : registroClientes.entrySet()) {
+            if (entry.getValue().getApellido().equalsIgnoreCase(apellido)) {
+                listaTelefonos.add(entry.getValue().getNumTel());
+            }
+        }
+        return listaTelefonos;
     }
 
-    Cliente buscarCliente(long numero) {
-        return;
-    }
+    public HashSet<Cliente> buscarClientes(String nombreCiudad) {
 
-    HashSet<Telefono> buscarTelefono(String apellido) {
-
-    }
-
-    HashSet<Cliente> buscarClientes(String nombreCiudad) {
+        HashSet<Cliente> listaClientes = new HashSet();
+        for (Map.Entry<Telefono, Cliente> entry : registroClientes.entrySet()) {
+            if (entry.getValue().getDireccion().getCiudad().equalsIgnoreCase(nombreCiudad)) {
+                listaClientes.add(entry.getValue());
+            }
+        }
+        return listaClientes;
 
     }
 

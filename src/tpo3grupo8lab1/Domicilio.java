@@ -38,4 +38,9 @@ public class Domicilio {
     public Domicilio() {
     }
 
+    @Override
+    public String toString() {
+        return "Domicilio: " + "Ciudad: " + ciudad + ", calle: " + calle + ", altura: " + altura + '.';
+    }
+
 }

@@ -1,5 +1,7 @@
 package tpo3grupo8lab1;
 
+import java.util.Objects;
+
 public class Cliente {
 
     private String nombre, apellido;
@@ -56,6 +58,37 @@ public class Cliente {
     }
 
     public Cliente() {
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 79 * hash + Objects.hashCode(this.nombre);
+        hash = 79 * hash + Objects.hashCode(this.apellido);
+        hash = 79 * hash + (int) (this.DNI ^ (this.DNI >>> 32));
+        hash = 79 * hash + Objects.hashCode(this.numTel);
+        hash = 79 * hash + Objects.hashCode(this.direccion);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Cliente other = (Cliente) obj;
+        return this.DNI == other.DNI;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente: " + "Nombre: " + nombre + ", apellido: " + apellido + ", DNI: " + DNI + ", numTel: " + numTel.getNumero() + ", " + direccion + '}';
     }
 
 }
