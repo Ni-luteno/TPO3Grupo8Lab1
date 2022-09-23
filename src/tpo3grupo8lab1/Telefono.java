@@ -40,7 +40,7 @@ public class Telefono {
 
     @Override
     public String toString() {
-        return "Telefono: " + "numero:" + numero + '.';
+        return "Telefono: " + "numero: " + numero + ". ";
     }
 
     public Telefono() {

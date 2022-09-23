@@ -49,14 +49,14 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-    public Cliente(String nombre, String apellido, long DNI, Telefono numTel, Domicilio direccion) {
+    public Cliente(String nombre, String apellido, long DNI, long numTel, Domicilio direccion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.DNI = DNI;
-        this.numTel = numTel;
+        this.numTel = new Telefono(numTel);
         this.direccion = direccion;
     }
-
+    
     public Cliente() {
     }
 
@@ -88,7 +88,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente: " + "Nombre: " + nombre + ", apellido: " + apellido + ", DNI: " + DNI + ", numTel: " + numTel.getNumero() + ", " + direccion + '}';
+        return "Cliente: " + "Nombre: " + nombre + ", apellido: " + apellido + ", DNI: " + DNI + ", numTel: " + numTel.getNumero() + ", " + direccion + '.';
     }
 
 }

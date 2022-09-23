@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 public class Directorio {
 
-    private HashMap<Telefono, Cliente> registroClientes;
+    private final HashMap<Telefono, Cliente> registroClientes=new HashMap<>();
 
     public Directorio() {
     }
@@ -72,6 +72,11 @@ public class Directorio {
         }
         return listaClientes;
 
+    }
+
+    @Override
+    public String toString() {
+        return "Directorio: " + "Registro: " + registroClientes;
     }
 
 }
