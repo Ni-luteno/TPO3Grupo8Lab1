@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="tpo3grupo8lab1">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="tpo3grupo8lab1" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="DNI" type="long" visibility="private"/>
+        <Field name="numTel" type="Telefono" visibility="private"/>
+        <Field name="direccion" type="Domicilio" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="long" name="DNI"/>
+          <Argument type="long" name="numTel"/>
+          <Argument type="Domicilio" name="direccion"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getDNI" returnType="long" visibility="public"/>
+        <Method name="setDNI" returnType="void" visibility="public">
+          <Argument type="long" name="DNI"/>
+        </Method>
+        <Method name="getNumTel" returnType="Telefono" visibility="public"/>
+        <Method name="setNumTel" returnType="void" visibility="public">
+          <Argument type="Telefono" name="numTel"/>
+        </Method>
+        <Method name="getDireccion" returnType="Domicilio" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="Domicilio" name="direccion"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Directorio" package="tpo3grupo8lab1" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="registroClientes" type="HashMap&lt;Telefono, Cliente&gt;" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getRegistroClientes" returnType="HashMap&lt;Telefono, Cliente&gt;" visibility="public"/>
+        <Method name="agregarCliente" returnType="boolean" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+          <Argument type="Telefono" name="numero"/>
+        </Method>
+        <Method name="borrarCliente" returnType="boolean" visibility="public">
+          <Argument type="Telefono" name="numero"/>
+        </Method>
+        <Method name="buscarCliente" returnType="Cliente" visibility="public">
+          <Argument type="Telefono" name="numero"/>
+        </Method>
+        <Method name="buscarTelefono" returnType="ArrayList&lt;Telefono&gt;" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="buscarClientes" returnType="HashSet&lt;Cliente&gt;" visibility="public">
+          <Argument type="String" name="nombreCiudad"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Domicilio" package="tpo3grupo8lab1" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="ciudad" type="String" visibility="private"/>
+        <Field name="altura" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="ciudad"/>
+          <Argument type="String" name="calle"/>
+          <Argument type="int" name="altura"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCiudad" returnType="String" visibility="public"/>
+        <Method name="setCiudad" returnType="void" visibility="public">
+          <Argument type="String" name="ciudad"/>
+        </Method>
+        <Method name="getCalle" returnType="String" visibility="public"/>
+        <Method name="setCalle" returnType="void" visibility="public">
+          <Argument type="String" name="calle"/>
+        </Method>
+        <Method name="getAltura" returnType="int" visibility="public"/>
+        <Method name="setAltura" returnType="void" visibility="public">
+          <Argument type="int" name="altura"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Telefono" package="tpo3grupo8lab1" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="numero" type="long" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="long" name="numero"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNumero" returnType="long" visibility="public"/>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="setNumero" returnType="void" visibility="public">
+          <Argument type="long" name="numero"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TPO3Grupo8Lab1" package="tpo3grupo8lab1" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="tpo3grupo8lab1.Cliente" target="tpo3grupo8lab1.Telefono" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="numTel" source="tpo3grupo8lab1.Cliente" target="tpo3grupo8lab1.Telefono" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="registroClientes" source="tpo3grupo8lab1.Directorio" target="tpo3grupo8lab1.Telefono" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Telefono, Cliente&gt;"/>
+    <UseRelation source="tpo3grupo8lab1.Directorio" target="tpo3grupo8lab1.Telefono" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="direccion" source="tpo3grupo8lab1.Cliente" target="tpo3grupo8lab1.Domicilio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="tpo3grupo8lab1.Cliente" target="tpo3grupo8lab1.Domicilio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="tpo3grupo8lab1.Directorio" target="tpo3grupo8lab1.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
