@@ -43,9 +43,9 @@ public class TPO3Grupo8Lab1 {
                     String calle = leer.next();
                     System.out.println("Altura:");
                     int altura = leer.nextInt();
-                    Domicilio domicilio = new Domicilio(ciudad, calle, altura);
-                    Cliente cliente = new Cliente(nom, ape, DNI, numTel, domicilio);
-                    d.agregarCliente(cliente,cliente.getNumTel());
+                   // Domicilio domicilio = new Domicilio(ciudad, calle, altura);
+//                    Cliente cliente = new Cliente(nom, ape, DNI, numTel, domicilio);
+//                    d.agregarCliente(cliente,cliente.getNumTel());
                     break;
                 case 3:
                     System.out.println("Ingrese el numero que desea borrar del directorio.");

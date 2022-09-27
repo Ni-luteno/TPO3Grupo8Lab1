@@ -2,8 +2,7 @@ package tpo3grupo8lab1;
 
 public class Domicilio {
 
-    private String ciudad, calle;
-    private int altura;
+    private String ciudad, direccion;
 
     public String getCiudad() {
         return ciudad;
@@ -13,34 +12,25 @@ public class Domicilio {
         this.ciudad = ciudad;
     }
 
-    public String getCalle() {
-        return calle;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setCalle(String calle) {
-        this.calle = calle;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
-    public int getAltura() {
-        return altura;
-    }
-
-    public void setAltura(int altura) {
-        this.altura = altura;
-    }
-
-    public Domicilio(String ciudad, String calle, int altura) {
+    public Domicilio(String ciudad, String direccion) {
         this.ciudad = ciudad;
-        this.calle = calle;
-        this.altura = altura;
+        this.direccion = direccion;
     }
-
+    
     public Domicilio() {
     }
 
     @Override
     public String toString() {
-        return "Domicilio: " + "Ciudad: " + ciudad + ", calle: " + calle + ", altura: " + altura + '.';
+        return "Domicilio: " + "Ciudad: " + ciudad + ", direccion: "+direccion+'.';
     }
 
 }
