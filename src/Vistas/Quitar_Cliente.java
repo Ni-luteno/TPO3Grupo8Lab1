@@ -1,5 +1,8 @@
 package Vistas;
 
+import static tpo3grupo8lab1.TPO3Grupo8Lab1.leer;
+import tpo3grupo8lab1.Telefono;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
@@ -16,7 +19,9 @@ public class Quitar_Cliente extends javax.swing.JPanel {
      */
     public Quitar_Cliente() {
         initComponents();
+      
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -48,37 +53,39 @@ public class Quitar_Cliente extends javax.swing.JPanel {
         jLabel2.setText("Borrar Cliente");
 
         jbBorrarCliente.setText("Borrar");
+        jbBorrarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBorrarClienteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpBorrarClienteLayout = new javax.swing.GroupLayout(jpBorrarCliente);
         jpBorrarCliente.setLayout(jpBorrarClienteLayout);
         jpBorrarClienteLayout.setHorizontalGroup(
             jpBorrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBorrarClienteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jpBorrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(jpBorrarClienteLayout.createSequentialGroup()
+                .addGroup(jpBorrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpBorrarClienteLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jpBorrarClienteLayout.createSequentialGroup()
+                        .addContainerGap(368, Short.MAX_VALUE)
                         .addComponent(jbBorrarCliente))
                     .addGroup(jpBorrarClienteLayout.createSequentialGroup()
                         .addComponent(jlTelefono)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jpBorrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jpBorrarClienteLayout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(0, 207, Short.MAX_VALUE))
-                            .addComponent(jtfTelefonoBorrarCliente))))
+                        .addComponent(jtfTelefonoBorrarCliente)))
                 .addContainerGap())
         );
         jpBorrarClienteLayout.setVerticalGroup(
             jpBorrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBorrarClienteLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jpBorrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfTelefonoBorrarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlTelefono))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 253, Short.MAX_VALUE)
+                    .addComponent(jlTelefono)
+                    .addComponent(jtfTelefonoBorrarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 258, Short.MAX_VALUE)
                 .addComponent(jbBorrarCliente)
                 .addContainerGap())
         );
@@ -104,6 +111,12 @@ public class Quitar_Cliente extends javax.swing.JPanel {
     private void jtfTelefonoBorrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfTelefonoBorrarClienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfTelefonoBorrarClienteActionPerformed
+
+    private void jbBorrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBorrarClienteActionPerformed
+    Telefono aux = new Telefono(leer.nextLong());
+    
+    
+    }//GEN-LAST:event_jbBorrarClienteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
