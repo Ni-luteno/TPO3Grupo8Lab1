@@ -7,8 +7,9 @@ package Vistas;
 
 import java.awt.BorderLayout;
 import tpo3grupo8lab1.Cliente;
-import tpo3grupo8lab1.Directorio;
+
 import tpo3grupo8lab1.Domicilio;
+import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
 
 /**
  *
@@ -23,7 +24,7 @@ public class Tpo3Vista extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
     }
-    private Directorio d = new Directorio();
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -98,7 +99,6 @@ public class Tpo3Vista extends javax.swing.JFrame {
         setBackground(new java.awt.Color(95, 158, 160));
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(82, 82, 82));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.setForeground(new java.awt.Color(82, 82, 82));
         jPanel1.setToolTipText("");
@@ -282,7 +282,6 @@ public class Tpo3Vista extends javax.swing.JFrame {
                 .addGap(65, 65, 65))
         );
 
-        content.setBackground(new java.awt.Color(82, 82, 82));
         content.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         content.setForeground(new java.awt.Color(82, 82, 82));
         content.setToolTipText("");
@@ -315,7 +314,7 @@ public class Tpo3Vista extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
