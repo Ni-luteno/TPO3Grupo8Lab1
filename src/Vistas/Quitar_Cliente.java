@@ -111,7 +111,6 @@ public class Quitar_Cliente extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfTelefonoBorrarClienteActionPerformed
 
     private void jbBorrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBorrarClienteActionPerformed
-        System.out.println(d);
         Telefono aux = new Telefono(Long.parseLong(jtfTelefonoBorrarCliente.getText()));
         d.borrarCliente(aux);    
     }//GEN-LAST:event_jbBorrarClienteActionPerformed

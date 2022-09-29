@@ -88,7 +88,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente: " + "Nombre: " + nombre + ", apellido: " + apellido + ", DNI: " + DNI + ", numTel: " + numTel.getNumero() + ", " + direccion + '.';
+        return "Cliente: " + "Nombre: " + nombre + ", apellido: " + apellido + ", DNI: " + DNI + ", numTel: " + numTel.getNumero() + ", " + direccion + "\n";
     }
 
 }

@@ -7,8 +7,8 @@ package Vistas;
 
 import java.awt.BorderLayout;
 import tpo3grupo8lab1.Cliente;
-import tpo3grupo8lab1.Directorio;
 import tpo3grupo8lab1.Domicilio;
+import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
 
 /**
  *
@@ -23,7 +23,6 @@ public class Tpo3Vista extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
     }
-    private Directorio d = new Directorio();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -374,15 +373,12 @@ public class Tpo3Vista extends javax.swing.JFrame {
         jtfCiudad.setText("");
         jtfDireccion.setText("");
         jtfTelefono.setText("");
-        System.out.println(d);
     }//GEN-LAST:event_jbBorrarActionPerformed
 
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
         Domicilio domi = new Domicilio(jtfCiudad.getText(), jtfDireccion.getText());
         Cliente c = new Cliente(jtfNombre.getText(), jtfApellido.getText(), Long.parseLong(jtfDNI.getText()), Long.parseLong(jtfTelefono.getText()), domi);
-        System.out.println(d);
         d.agregarCliente(c, c.getNumTel());
-        System.out.println(d);
     }//GEN-LAST:event_jbGuardarActionPerformed
 
     private void jtfTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfTelefonoActionPerformed

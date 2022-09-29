@@ -4,6 +4,10 @@
  */
 package Vistas;
 
+import javax.swing.JOptionPane;
+import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
+import tpo3grupo8lab1.Telefono;
+
 /**
  *
  * @author Santi
@@ -99,7 +103,10 @@ public class Buscar_Clientes_por_Telefono extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbBuscarporTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarporTelefonoActionPerformed
-        // TODO add your handling code here:
+        Telefono aux = new Telefono(Long.parseLong(jtfBuscarporTelefono.getText()));
+        JOptionPane.showMessageDialog(null, d.buscarCliente(aux));
+
+// TODO add your handling code here:
     }//GEN-LAST:event_jbBuscarporTelefonoActionPerformed
 
 

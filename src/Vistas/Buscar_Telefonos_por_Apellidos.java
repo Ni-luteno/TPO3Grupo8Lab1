@@ -4,6 +4,9 @@
  */
 package Vistas;
 
+import javax.swing.JOptionPane;
+import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
+
 /**
  *
  * @author Santi
@@ -45,9 +48,14 @@ public class Buscar_Telefonos_por_Apellidos extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Buscar Telefonos por Apellido");
 
-        jLabel2.setText("Telefono");
+        jLabel2.setText("Apellido");
 
         jtfBuscarTelefonoporApellido.setToolTipText("");
+        jtfBuscarTelefonoporApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfBuscarTelefonoporApellidoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -99,8 +107,13 @@ public class Buscar_Telefonos_por_Apellidos extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbBuscarTelefonoporApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarTelefonoporApellidoActionPerformed
+        JOptionPane.showMessageDialog(null, d.buscarTelefono(jtfBuscarTelefonoporApellido.getText()));
         // TODO add your handling code here:
     }//GEN-LAST:event_jbBuscarTelefonoporApellidoActionPerformed
+
+    private void jtfBuscarTelefonoporApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfBuscarTelefonoporApellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfBuscarTelefonoporApellidoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
