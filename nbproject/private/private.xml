@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< Updated upstream
             <file>file:/C:/Users/tcnlu/Documents/NetBeansProjects/TPO3Grupo8Lab1/src/Vistas/Buscar_Telefonos_por_Apellidos.java</file>
             <file>file:/C:/Users/tcnlu/Documents/NetBeansProjects/TPO3Grupo8Lab1/src/tpo3grupo8lab1/Cliente.java</file>
             <file>file:/C:/Users/tcnlu/Documents/NetBeansProjects/TPO3Grupo8Lab1/src/tpo3grupo8lab1/Domicilio.java</file>
@@ -12,6 +13,14 @@
             <file>file:/C:/Users/tcnlu/Documents/NetBeansProjects/TPO3Grupo8Lab1/src/Vistas/Buscar_Clientes_por_Telefono.java</file>
             <file>file:/C:/Users/tcnlu/Documents/NetBeansProjects/TPO3Grupo8Lab1/src/tpo3grupo8lab1/Directorio.java</file>
             <file>file:/C:/Users/tcnlu/Documents/NetBeansProjects/TPO3Grupo8Lab1/src/Vistas/Quitar_Cliente.java</file>
+=======
+            <file>file:/C:/Users/Santi/Documents/GitHub/TPO3Grupo8Lab1/src/Vistas/Buscar_Clientes_por_Ciudad.java</file>
+            <file>file:/C:/Users/Santi/Documents/GitHub/TPO3Grupo8Lab1/src/Vistas/Buscar_Clientes_por_Telefono.java</file>
+            <file>file:/C:/Users/Santi/Documents/GitHub/TPO3Grupo8Lab1/src/tpo3grupo8lab1/TPO3Grupo8Lab1.java</file>
+            <file>file:/C:/Users/Santi/Documents/GitHub/TPO3Grupo8Lab1/src/Vistas/Tpo3Vista.java</file>
+            <file>file:/C:/Users/Santi/Documents/GitHub/TPO3Grupo8Lab1/src/Vistas/Buscar_Telefonos_por_Apellidos.java</file>
+            <file>file:/C:/Users/Santi/Documents/GitHub/TPO3Grupo8Lab1/src/Vistas/Quitar_Cliente.java</file>
+>>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>
