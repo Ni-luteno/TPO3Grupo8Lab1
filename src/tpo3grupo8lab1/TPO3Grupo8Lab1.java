@@ -10,7 +10,7 @@ public class TPO3Grupo8Lab1 {
 
         Tpo3Vista vista = new Tpo3Vista();
         vista.setVisible(true);
-        
+
     }
 
 }

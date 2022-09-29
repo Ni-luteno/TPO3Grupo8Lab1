@@ -318,37 +318,29 @@ public class Tpo3Vista extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jbBuscarTelporApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarTelporApellidoActionPerformed
-        Buscar_Telefonos_por_Apellidos a = new Buscar_Telefonos_por_Apellidos();
-        a.setSize(473, 411);
+    private void presentarvistas (javax.swing.JPanel a){
+         a.setSize(473, 411);
         a.setLocation(0, 0);
         content.removeAll();
         content.add(a, BorderLayout.CENTER);
         content.revalidate();
         content.repaint();
+    }
+    private void jbBuscarTelporApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarTelporApellidoActionPerformed
+        Buscar_Telefonos_por_Apellidos a = new Buscar_Telefonos_por_Apellidos();
+        presentarvistas (a);
 
     }//GEN-LAST:event_jbBuscarTelporApellidoActionPerformed
 
     private void jbBuscarClienteporTelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarClienteporTelActionPerformed
         Buscar_Clientes_por_Telefono a = new Buscar_Clientes_por_Telefono();
-        a.setSize(473, 411);
-        a.setLocation(0, 0);
-        content.removeAll();
-        content.add(a, BorderLayout.CENTER);
-        content.revalidate();
-        content.repaint();
+        presentarvistas (a);
 
     }//GEN-LAST:event_jbBuscarClienteporTelActionPerformed
 
     private void jbIrQuitarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbIrQuitarClienteActionPerformed
         Quitar_Cliente a = new Quitar_Cliente();
-        a.setSize(473, 411);
-        a.setLocation(0, 0);
-        content.removeAll();
-        content.add(a, BorderLayout.CENTER);
-        content.revalidate();
-        content.repaint();
+        presentarvistas (a);
 
     }//GEN-LAST:event_jbIrQuitarClienteActionPerformed
 
@@ -385,12 +377,7 @@ public class Tpo3Vista extends javax.swing.JFrame {
 
     private void jbBuscarClienteporCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarClienteporCiudadActionPerformed
         Buscar_Clientes_por_Ciudad a = new Buscar_Clientes_por_Ciudad();
-        a.setSize(473, 411);
-        a.setLocation(0, 0);
-        content.removeAll();
-        content.add(a, BorderLayout.CENTER);
-        content.revalidate();
-        content.repaint();
+        presentarvistas (a);
 
     }//GEN-LAST:event_jbBuscarClienteporCiudadActionPerformed
 
