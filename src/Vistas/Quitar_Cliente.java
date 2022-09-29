@@ -1,13 +1,12 @@
 package Vistas;
 
-import static tpo3grupo8lab1.TPO3Grupo8Lab1.leer;
+import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
 import tpo3grupo8lab1.Telefono;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-
 /**
  *
  * @author Santi
@@ -19,9 +18,8 @@ public class Quitar_Cliente extends javax.swing.JPanel {
      */
     public Quitar_Cliente() {
         initComponents();
-      
-    }
 
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -113,9 +111,9 @@ public class Quitar_Cliente extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfTelefonoBorrarClienteActionPerformed
 
     private void jbBorrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBorrarClienteActionPerformed
-    Telefono aux = new Telefono(leer.nextLong());
-    
-    
+        System.out.println(d);
+        Telefono aux = new Telefono(Long.parseLong(jtfTelefonoBorrarCliente.getText()));
+        d.borrarCliente(aux);    
     }//GEN-LAST:event_jbBorrarClienteActionPerformed
 
 

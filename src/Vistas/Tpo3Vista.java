@@ -374,12 +374,15 @@ public class Tpo3Vista extends javax.swing.JFrame {
         jtfCiudad.setText("");
         jtfDireccion.setText("");
         jtfTelefono.setText("");
+        System.out.println(d);
     }//GEN-LAST:event_jbBorrarActionPerformed
 
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
         Domicilio domi = new Domicilio(jtfCiudad.getText(), jtfDireccion.getText());
         Cliente c = new Cliente(jtfNombre.getText(), jtfApellido.getText(), Long.parseLong(jtfDNI.getText()), Long.parseLong(jtfTelefono.getText()), domi);
+        System.out.println(d);
         d.agregarCliente(c, c.getNumTel());
+        System.out.println(d);
     }//GEN-LAST:event_jbGuardarActionPerformed
 
     private void jtfTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfTelefonoActionPerformed

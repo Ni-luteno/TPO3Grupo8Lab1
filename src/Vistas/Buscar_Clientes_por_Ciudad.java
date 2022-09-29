@@ -4,12 +4,17 @@
  */
 package Vistas;
 
+import tpo3grupo8lab1.Directorio;
+import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
+
 /**
  *
  * @author Santi
  */
 public class Buscar_Clientes_por_Ciudad extends javax.swing.JPanel {
 
+    
+    Directorio dLocal= new Directorio();
     /**
      * Creates new form Buscar_Por_Ciudad
      */
@@ -97,7 +102,12 @@ public class Buscar_Clientes_por_Ciudad extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbBuscarporCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarporCiudadActionPerformed
-        // TODO add your handling code here:
+        dLocal=d;
+        System.out.println(d);
+        d.buscarClientes(jtfBuscarporCiudad.getText());
+        System.out.println(d);
+        
+// TODO add your handling code here:
     }//GEN-LAST:event_jbBuscarporCiudadActionPerformed
 
 
