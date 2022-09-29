@@ -157,7 +157,7 @@ public class Tpo3Vista extends javax.swing.JFrame {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Agregar Cliente");
 
-        jbIrQuitarCliente.setText("Ir a Quitar Cliente");
+        jbIrQuitarCliente.setText("Quitar Cliente");
         jbIrQuitarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbIrQuitarClienteActionPerformed(evt);
