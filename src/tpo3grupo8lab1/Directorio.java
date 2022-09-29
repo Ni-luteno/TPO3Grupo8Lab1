@@ -58,7 +58,7 @@ public class Directorio {
             if (entry.getValue().getApellido().equalsIgnoreCase(apellido)) {
                 listaTelefonos.add(entry.getValue().getNumTel());
             }else{
-                JOptionPane.showMessageDialog(null, "El numero no corresponde a ningun cliente registrado.");
+                JOptionPane.showMessageDialog(null, "El apellido no corresponde a ningun cliente registrado.");
             }
         }
         return listaTelefonos;
@@ -71,7 +71,7 @@ public class Directorio {
             if (entry.getValue().getDireccion().getCiudad().equalsIgnoreCase(nombreCiudad)) {
                 listaClientes.add(entry.getValue());
             }else{
-                JOptionPane.showMessageDialog(null, "El numero no corresponde a ningun cliente registrado.");
+                JOptionPane.showMessageDialog(null, "La ciudad no corresponde a ningun cliente registrado.");
             }
         }
         return listaClientes;
