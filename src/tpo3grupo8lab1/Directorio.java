@@ -58,6 +58,8 @@ public class Directorio {
         for (Map.Entry<Telefono, Cliente> entry : registroClientes.entrySet()) {
             if (entry.getValue().getApellido().equalsIgnoreCase(apellido)) {
                 listaTelefonos.add(entry.getValue().getNumTel());
+            }else{
+                JOptionPane.showMessageDialog(null, "El apellido no corresponde a ningun cliente registrado.");
             }
         }
         return listaTelefonos;
@@ -69,6 +71,8 @@ public class Directorio {
         for (Map.Entry<Telefono, Cliente> entry : registroClientes.entrySet()) {
             if (entry.getValue().getDireccion().getCiudad().equalsIgnoreCase(nombreCiudad)) {
                 listaClientes.add(entry.getValue());
+            }else{
+                JOptionPane.showMessageDialog(null, "La ciudad no corresponde a ningun cliente registrado.");
             }
         }
         return listaClientes;

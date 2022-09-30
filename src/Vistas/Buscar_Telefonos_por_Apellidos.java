@@ -103,7 +103,6 @@ public class Buscar_Telefonos_por_Apellidos extends javax.swing.JPanel {
 
     private void jbBuscarTelefonoporApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarTelefonoporApellidoActionPerformed
         JOptionPane.showMessageDialog(null, d.buscarTelefono(jtfBuscarTelefonoporApellido.getText()));
-        // TODO add your handling code here:
     }//GEN-LAST:event_jbBuscarTelefonoporApellidoActionPerformed
 
     private void jtfBuscarTelefonoporApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfBuscarTelefonoporApellidoActionPerformed
