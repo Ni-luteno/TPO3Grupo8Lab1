@@ -103,7 +103,6 @@ public class Buscar_Clientes_por_Telefono extends javax.swing.JPanel {
             Telefono aux = new Telefono(Long.parseLong(jtfBuscarporTelefono.getText()));
             if (d.buscarCliente(aux) != null) {
                 JOptionPane.showMessageDialog(null, d.buscarCliente(aux));
-
             }
         } catch (HeadlessException | NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Error, ingrese un numero de telefono valido.");

@@ -102,7 +102,12 @@ public class Buscar_Telefonos_por_Apellidos extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbBuscarTelefonoporApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarTelefonoporApellidoActionPerformed
-        JOptionPane.showMessageDialog(null, d.buscarTelefono(jtfBuscarTelefonoporApellido.getText()));
+        if (!d.buscarTelefono(jtfBuscarTelefonoporApellido.getText()).isEmpty()) {
+            JOptionPane.showMessageDialog(null, d.buscarTelefono(jtfBuscarTelefonoporApellido.getText()));
+        } else {
+            JOptionPane.showMessageDialog(null, "No hay números telefonicos correspondientes a ese apellido");
+        }
+
     }//GEN-LAST:event_jbBuscarTelefonoporApellidoActionPerformed
 
     private void jtfBuscarTelefonoporApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfBuscarTelefonoporApellidoActionPerformed
