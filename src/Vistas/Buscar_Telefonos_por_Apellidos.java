@@ -5,6 +5,7 @@
 package Vistas;
 
 import javax.swing.JOptionPane;
+import tpo3grupo8lab1.Directorio;
 import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
 
 /**

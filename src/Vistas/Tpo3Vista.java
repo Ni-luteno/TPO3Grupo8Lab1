@@ -17,9 +17,6 @@ import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
  */
 public class Tpo3Vista extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Tpo3Vista
-     */
     public Tpo3Vista() {
         initComponents();
         this.setLocationRelativeTo(null);
