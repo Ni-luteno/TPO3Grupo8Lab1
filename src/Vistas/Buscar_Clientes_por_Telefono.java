@@ -4,6 +4,7 @@
  */
 package Vistas;
 
+import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
 import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
 import tpo3grupo8lab1.Telefono;
@@ -98,9 +99,15 @@ public class Buscar_Clientes_por_Telefono extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbBuscarporTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarporTelefonoActionPerformed
-        Telefono aux = new Telefono(Long.parseLong(jtfBuscarporTelefono.getText()));
-        JOptionPane.showMessageDialog(null, d.buscarCliente(aux));
+        try {
+            Telefono aux = new Telefono(Long.parseLong(jtfBuscarporTelefono.getText()));
+            if (d.buscarCliente(aux) != null) {
+                JOptionPane.showMessageDialog(null, d.buscarCliente(aux));
 
+            }
+        } catch (HeadlessException | NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Error, ingrese un numero de telefono valido.");
+        }
 // TODO add your handling code here:
     }//GEN-LAST:event_jbBuscarporTelefonoActionPerformed
 

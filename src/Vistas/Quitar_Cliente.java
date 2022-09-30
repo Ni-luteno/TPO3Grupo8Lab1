@@ -1,5 +1,6 @@
 package Vistas;
 
+import javax.swing.JOptionPane;
 import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
 import tpo3grupo8lab1.Telefono;
 
@@ -106,8 +107,13 @@ public class Quitar_Cliente extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfTelefonoBorrarClienteActionPerformed
 
     private void jbBorrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBorrarClienteActionPerformed
-        Telefono aux = new Telefono(Long.parseLong(jtfTelefonoBorrarCliente.getText()));
-        d.borrarCliente(aux);    
+        try {
+            Telefono aux = new Telefono(Long.parseLong(jtfTelefonoBorrarCliente.getText()));
+            d.borrarCliente(aux);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Error, ingrese numero de telefono valido.");
+        }
+
     }//GEN-LAST:event_jbBorrarClienteActionPerformed
 
 

@@ -96,7 +96,12 @@ public class Buscar_Clientes_por_Ciudad extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbBuscarporCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarporCiudadActionPerformed
-        JOptionPane.showMessageDialog(null, d.buscarClientes(jtfBuscarporCiudad.getText()));
+        if (d.buscarClientes(jtfBuscarporCiudad.getText()).isEmpty()) {
+            JOptionPane.showMessageDialog(null, "No hay clientes registrados que correspondan a esa ciudad.");
+        } else {
+            JOptionPane.showMessageDialog(null, d.buscarClientes(jtfBuscarporCiudad.getText()));
+        }
+
 // TODO add your handling code here:
     }//GEN-LAST:event_jbBuscarporCiudadActionPerformed
 

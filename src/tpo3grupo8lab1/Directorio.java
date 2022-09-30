@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 public class Directorio {
 
-    private final HashMap<Telefono, Cliente> registroClientes=new HashMap<>();
+    private final HashMap<Telefono, Cliente> registroClientes = new HashMap<>();
 
     public Directorio() {
     }
@@ -27,6 +27,7 @@ public class Directorio {
             JOptionPane.showMessageDialog(null, "Cliente registrado.");
             return true;
         }
+
     }
 
     public boolean borrarCliente(Telefono numero) {
@@ -42,13 +43,13 @@ public class Directorio {
     }
 
     public Cliente buscarCliente(Telefono numero) {
+
         if (registroClientes.containsKey(numero)) {
             return registroClientes.get(numero);
         } else {
             JOptionPane.showMessageDialog(null, "El numero no corresponde a ningun cliente registrado.");
             return registroClientes.get(numero);
         }
-
     }
 
     public ArrayList<Telefono> buscarTelefono(String apellido) {
