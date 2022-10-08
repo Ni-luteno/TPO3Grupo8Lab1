@@ -8,8 +8,8 @@ package Vistas;
 import java.awt.BorderLayout;
 import javax.swing.JOptionPane;
 import tpo3grupo8lab1.Cliente;
+import tpo3grupo8lab1.Directorio;
 import tpo3grupo8lab1.Domicilio;
-import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
 
 /**
  *
@@ -17,7 +17,10 @@ import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
  */
 public class Tpo3Vista extends javax.swing.JFrame {
 
-    public Tpo3Vista() {
+    private static Directorio d = new Directorio();
+
+    public Tpo3Vista(Directorio d) {
+        Tpo3Vista.d = d;
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -318,19 +321,19 @@ public class Tpo3Vista extends javax.swing.JFrame {
         content.repaint();
     }
     private void jbBuscarTelporApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarTelporApellidoActionPerformed
-        Buscar_Telefonos_por_Apellidos a = new Buscar_Telefonos_por_Apellidos();
+        Buscar_Telefonos_por_Apellidos a = new Buscar_Telefonos_por_Apellidos(d);
         presentarvistas(a);
 
     }//GEN-LAST:event_jbBuscarTelporApellidoActionPerformed
 
     private void jbBuscarClienteporTelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarClienteporTelActionPerformed
-        Buscar_Clientes_por_Telefono a = new Buscar_Clientes_por_Telefono();
+        Buscar_Clientes_por_Telefono a = new Buscar_Clientes_por_Telefono(d);
         presentarvistas(a);
 
     }//GEN-LAST:event_jbBuscarClienteporTelActionPerformed
 
     private void jbIrQuitarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbIrQuitarClienteActionPerformed
-        Quitar_Cliente a = new Quitar_Cliente();
+        Quitar_Cliente a = new Quitar_Cliente(d);
         presentarvistas(a);
 
     }//GEN-LAST:event_jbIrQuitarClienteActionPerformed
@@ -354,6 +357,7 @@ public class Tpo3Vista extends javax.swing.JFrame {
         jtfCiudad.setText("");
         jtfDireccion.setText("");
         jtfTelefono.setText("");
+        System.out.println(d);
     }//GEN-LAST:event_jbBorrarActionPerformed
 
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
@@ -376,7 +380,7 @@ public class Tpo3Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfTelefonoActionPerformed
 
     private void jbBuscarClienteporCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarClienteporCiudadActionPerformed
-        Buscar_Clientes_por_Ciudad a = new Buscar_Clientes_por_Ciudad();
+        Buscar_Clientes_por_Ciudad a = new Buscar_Clientes_por_Ciudad(d);
         presentarvistas(a);
 
     }//GEN-LAST:event_jbBuscarClienteporCiudadActionPerformed
@@ -411,7 +415,7 @@ public class Tpo3Vista extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Tpo3Vista().setVisible(true);
+                new Tpo3Vista(d).setVisible(true);
             }
         });
     }

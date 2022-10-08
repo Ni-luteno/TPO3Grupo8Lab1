@@ -1,7 +1,7 @@
 package Vistas;
 
 import javax.swing.JOptionPane;
-import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
+import tpo3grupo8lab1.Directorio;
 import tpo3grupo8lab1.Telefono;
 
 /*
@@ -14,10 +14,14 @@ import tpo3grupo8lab1.Telefono;
  */
 public class Quitar_Cliente extends javax.swing.JPanel {
 
+    private static Directorio d = new Directorio();
+
     /**
      * Creates new form Quitar_Cliente
+     * @param d
      */
-    public Quitar_Cliente() {
+    public Quitar_Cliente(Directorio d) {
+        Quitar_Cliente.d = d;
         initComponents();
 
     }

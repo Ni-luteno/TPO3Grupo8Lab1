@@ -6,7 +6,7 @@ package Vistas;
 
 import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
-import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
+import tpo3grupo8lab1.Directorio;
 import tpo3grupo8lab1.Telefono;
 
 /**
@@ -15,10 +15,14 @@ import tpo3grupo8lab1.Telefono;
  */
 public class Buscar_Clientes_por_Telefono extends javax.swing.JPanel {
 
+    private static Directorio d = new Directorio();
+
     /**
      * Creates new form BuscarporTelefonoaa
+     * @param d
      */
-    public Buscar_Clientes_por_Telefono() {
+    public Buscar_Clientes_por_Telefono(Directorio d) {
+        Buscar_Clientes_por_Telefono.d=d;
         initComponents();
     }
 

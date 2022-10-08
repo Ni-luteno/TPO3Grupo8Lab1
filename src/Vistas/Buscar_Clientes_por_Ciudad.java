@@ -5,7 +5,7 @@
 package Vistas;
 
 import javax.swing.JOptionPane;
-import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
+import tpo3grupo8lab1.Directorio;
 
 /**
  *
@@ -13,10 +13,15 @@ import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
  */
 public class Buscar_Clientes_por_Ciudad extends javax.swing.JPanel {
 
+    private static Directorio d = new Directorio();
+
     /**
      * Creates new form Buscar_Por_Ciudad
+     *
+     * @param d
      */
-    public Buscar_Clientes_por_Ciudad() {
+    public Buscar_Clientes_por_Ciudad(Directorio d) {
+        Buscar_Clientes_por_Ciudad.d = d;
         initComponents();
     }
 

@@ -6,7 +6,6 @@ package Vistas;
 
 import javax.swing.JOptionPane;
 import tpo3grupo8lab1.Directorio;
-import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
 
 /**
  *
@@ -14,10 +13,15 @@ import static tpo3grupo8lab1.TPO3Grupo8Lab1.d;
  */
 public class Buscar_Telefonos_por_Apellidos extends javax.swing.JPanel {
 
+    private static Directorio d = new Directorio();
+
     /**
      * Creates new form Buscar_Telefonos_por_Apellidos
+     *
+     * @param d
      */
-    public Buscar_Telefonos_por_Apellidos() {
+    public Buscar_Telefonos_por_Apellidos(Directorio d) {
+        Buscar_Telefonos_por_Apellidos.d = d;
         initComponents();
     }
 
