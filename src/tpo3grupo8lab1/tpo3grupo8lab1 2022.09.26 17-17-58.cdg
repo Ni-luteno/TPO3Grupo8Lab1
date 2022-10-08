@@ -2,7 +2,7 @@
 
 <ClassDiagram name="tpo3grupo8lab1">
   <ClassDiagramComponents>
-    <Class name="Cliente" package="tpo3grupo8lab1" visibility="public" xPosition="383.0" yPosition="444.0">
+    <Class name="Cliente" package="tpo3grupo8lab1" visibility="public" xPosition="450.0" yPosition="231.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="DNI" type="long" visibility="private"/>
@@ -47,7 +47,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Directorio" package="tpo3grupo8lab1" visibility="public" xPosition="1063.0" yPosition="421.0">
+    <Class name="Directorio" package="tpo3grupo8lab1" visibility="public" xPosition="1017.0" yPosition="438.0">
       <Fields>
         <Field name="registroClientes" type="HashMap&lt;Telefono, Cliente&gt;" visibility="private" isFinal="true"/>
       </Fields>
@@ -75,10 +75,9 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Domicilio" package="tpo3grupo8lab1" visibility="public" xPosition="343.0" yPosition="71.0">
+    <Class name="Domicilio" package="tpo3grupo8lab1" visibility="public" xPosition="54.0" yPosition="55.0">
       <Fields>
         <Field name="ciudad" type="String" visibility="private"/>
-        <Field name="altura" type="int" visibility="private"/>
       </Fields>
       <Constructors>
         <Constructor visibility="public">
@@ -104,7 +103,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Telefono" package="tpo3grupo8lab1" visibility="public" xPosition="778.0" yPosition="71.0">
+    <Class name="Telefono" package="tpo3grupo8lab1" visibility="public" xPosition="970.0" yPosition="55.0">
       <Fields>
         <Field name="numero" type="long" visibility="private"/>
       </Fields>
@@ -126,10 +125,8 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="TPO3Grupo8Lab1" package="tpo3grupo8lab1" visibility="public" xPosition="1220.0" yPosition="20.0">
-      <Fields>
-        <Field name="leer" type="Scanner" visibility="public" isStatic="true"/>
-      </Fields>
+    <Class name="TPO3Grupo8Lab1" package="tpo3grupo8lab1" visibility="public" xPosition="498.0" yPosition="20.0">
+      <Fields/>
       <Constructors/>
       <Methods>
         <Method name="main" returnType="void" visibility="public" isStatic="true">
@@ -140,11 +137,11 @@
   </ClassDiagramComponents>
   <ClassDiagramRelations>
     <HasRelation name="numTel" source="tpo3grupo8lab1.Cliente" target="tpo3grupo8lab1.Telefono" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="tpo3grupo8lab1.Cliente" target="tpo3grupo8lab1.Domicilio" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="registroClientes" source="tpo3grupo8lab1.Directorio" target="tpo3grupo8lab1.Telefono" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="HashMap&lt;Telefono, Cliente&gt;"/>
-    <UseRelation source="tpo3grupo8lab1.Directorio" target="tpo3grupo8lab1.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="direccion" source="tpo3grupo8lab1.Cliente" target="tpo3grupo8lab1.Domicilio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="tpo3grupo8lab1.Cliente" target="tpo3grupo8lab1.Telefono" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="tpo3grupo8lab1.Directorio" target="tpo3grupo8lab1.Telefono" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="direccion" source="tpo3grupo8lab1.Cliente" target="tpo3grupo8lab1.Domicilio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="tpo3grupo8lab1.Cliente" target="tpo3grupo8lab1.Domicilio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="tpo3grupo8lab1.Directorio" target="tpo3grupo8lab1.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>
